@@ -1,2 +1,25 @@
 # Auto detect text files and perform LF normalization
-* text=auto
+*	 	 text=auto
+
+# Program Codes
+*.cs	 text diff=csharp
+*.java	 text diff=java
+*.html	 text diff=html
+*.py	 text diff=python
+*.pl	 text diff=perl
+*.pm	 text diff=perl
+*.css	 text
+*.js	 text
+*.sql	 text
+
+# Standard to msysgit
+*.doc	 diff=astextplain
+*.DOC	 diff=astextplain
+*.docx	 diff=astextplain
+*.DOCX	 diff=astextplain
+*.dot	 diff=astextplain
+*.DOT	 diff=astextplain
+*.pdf	 diff=astextplain
+*.PDF	 diff=astextplain
+*.rtf	 diff=astextplain
+*.RTF	 diff=astextplain

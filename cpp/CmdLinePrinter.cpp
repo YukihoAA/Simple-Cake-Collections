@@ -12,6 +12,7 @@ int main(int argc, char* argv[])
 		strcat(CmdLine, argv[i]);
 	if (hWnd == NULL || ShowWindow(hWnd, SW_SHOW) == 0) {
 		ShellExecuteA(NULL, "open", argv[0], CmdLine, NULL, SW_SHOW);
+		return 0;
 	}
 
 	printf("Argument Count: %d\n", argc);

@@ -7,10 +7,14 @@
 int main(int argc, char* argv[])
 {
 	HWND hWnd = GetConsoleWindow();
-	char CmdLine[MAX_PATH] = "";
-	for (int i = 1; i < argc; i++)
-		strcat(CmdLine, argv[i]);
+	
 	if (hWnd == NULL || ShowWindow(hWnd, SW_SHOW) == 0) {
+		char CmdLine[MAX_PATH] = "";
+	
+		for (int i = 1; i < argc; i++){
+			strcat_s(CmdLine, argv[i]);
+			strcat_s(CmdLine, " ");
+		}
 		ShellExecuteA(NULL, "open", argv[0], CmdLine, NULL, SW_SHOW);
 		return 0;
 	}

@@ -3,9 +3,9 @@ set CMAKE=C:\cmake\bin\cmake.exe
 set OpenCV=C:/opencv
 set OpenCV_VER=4.0.0
 cd /d %~dp0
-rd /S /q output
-mkdir output
-cd output
+rd /S /q out
+mkdir out
+cd out
 %CMAKE% -DCMAKE_GENERATOR="Visual Studio 15 2017 Win64" -DOPENCV_PREFIX=%OpenCV%/build/ -DFORCE_DUAL=ON ..
 msbuild waifu2xcpp.sln /p:Configuration=Release /p:Platform=x64
 set OpenCV=%OpenCV:/=\%

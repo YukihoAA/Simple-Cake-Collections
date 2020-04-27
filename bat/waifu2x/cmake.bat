@@ -1,12 +1,12 @@
 @echo off
 set CMAKE=D:\cmake\bin\cmake.exe
 set OpenCV=D:/opencv
-set OpenCV_VER=4.1.1
+set OpenCV_VER=4.1.2
 cd /d %~dp0
 rd /S /q out
 mkdir out
 cd out
-%CMAKE% -DCMAKE_GENERATOR="Visual Studio 15 2017 Win64" -DOPENCV_PREFIX=%OpenCV%/build/ ..
+%CMAKE% -DCMAKE_GENERATOR="Visual Studio 16 2019" -A x64 -DOPENCV_PREFIX=%OpenCV%/build/ ..
 msbuild waifu2xcpp.sln /p:Configuration=Release /p:Platform=x64 -m
 set OpenCV=%OpenCV:/=\%
 set OpenCV_VER=%OpenCV_VER:.=%

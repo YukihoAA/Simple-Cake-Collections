@@ -6,7 +6,7 @@ cd /d %~dp0
 rd /S /q out
 mkdir out
 cd out
-%CMAKE% -DCMAKE_GENERATOR="Visual Studio 16 2019" -A x64 -DOPENCV_PREFIX=%OpenCV%/build/ -DENABLE_UNICODE=OFF ..
+%CMAKE% -DCMAKE_GENERATOR="Visual Studio 16 2019" -A x64 -DOPENCV_PREFIX=%OpenCV%/build/ -DENABLE_OPENCV=OFF ..
 msbuild waifu2xcpp.sln /p:Configuration=Release /p:Platform=x64 -m
 set OpenCV=%OpenCV:/=\%
 set OpenCV_VER=%OpenCV_VER:.=%
